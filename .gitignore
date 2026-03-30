@@ -1,4 +1,3 @@
-### AL ###
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder
 .vscode/
@@ -20,3 +19,25 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
+
+# Environment / secrets
+.env
+.env.*
+
+# Coverage reports
+coverage/
+*.coverage
+
+# Node (se usar alguma automação)
+node_modules/
+
+# Generic build folders
+dist/
+build/
