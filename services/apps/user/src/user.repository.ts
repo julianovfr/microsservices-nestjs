@@ -38,7 +38,7 @@ export class UsersRepository {
 
   async findByEmail(email: string): Promise<UserRow | null> {
     const result = await this.db.pool.query<UserRow>(
-      `SELECT id, name, email, password, role, created_at, updated_at
+      `SELECT id, name, email, password, role
        FROM users
        WHERE email = $1
        LIMIT 1`,

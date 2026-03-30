@@ -1,12 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { ZooService } from './zoo.service';
 
-@Controller()
+@Controller('/zoo')
 export class ZooController {
   constructor(private readonly zooService: ZooService) {}
 
-  @Get()
-  getHello(): string {
-    return this.zooService.getHello();
+  @Get('/ping')
+  getPing() {
+    return {
+      message: 'pong by zoo service',
+    };
   }
 }

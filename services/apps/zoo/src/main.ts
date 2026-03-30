@@ -3,6 +3,8 @@ import { ZooModule } from './zoo.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(ZooModule);
-  await app.listen(process.env.port ?? 3000);
+  const port = Number(process.env.PORT) || 3003;
+  const host = process.env.HOST ?? '0.0.0.0';
+  await app.listen(port, host);
 }
 bootstrap();
