@@ -1,1 +1,1 @@
-INSERT INTO users (name, email, password, role) VALUES ('Support', 'support@example.com', 'password', 'support');
+INSERT INTO users (name, email, password, role) VALUES ('Support', 'support@example.com', '$2b$10$DUWBrE2uUenkHbJYjsIVWe.y1blFp.DZsw.rP9EqoeVo8qXAZTCK2', 'support');

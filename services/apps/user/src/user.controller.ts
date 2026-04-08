@@ -1,16 +1,23 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import type { LoginBody, CreateUserBody } from './user.service';
 import { UserService } from './user.service';
 
-@Controller("/user")
+
+@Controller('/user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post("/create")
-  createUser(@Body() body: any) {
+  @Post('/create')
+  createUser(@Body() body: CreateUserBody) {
     return this.userService.createUser(body);
   }
 
-  @Get("/ping")
+  @Post('/login')
+  login(@Body() body: LoginBody) {
+    return this.userService.login(body);
+  }
+
+  @Get('/ping')
   ping() {
     return {
       message: 'pong by user service\n',
